@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Wellness Website</title>
+    <style>
+        body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image: url("../images/1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0; /* Remove default margins to ensure proper layout */
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #58a6ff;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+           font-size: 2rem;
+           margin: 0; /* Remove margin for better alignment */
+        }
+
+        nav {
+            background: rgb(122, 119, 119);
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem 1rem;
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: rgb(122, 119, 119);
+            color: #fff;
+            text-align: center;
+            padding: 0rem 0;
+            margin-top: 0rem;
+            bottom: 0;
+            width: 100%; /* Make footer span the full width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <section class="services-list">
+        <div class="service-card">
+            <h3>Yoga</h3>
+            <p>Find balance and peace with our yoga sessions.</p>
+        </div>
+        <div class="service-card">
+            <h3>Meditation</h3>
+            <p>Calm your mind and improve focus with guided meditation.</p>
+        </div>
+        <div class="service-card">
+            <h3>Therapy</h3>
+            <p>Heal and grow with professional therapy sessions.</p>
+        </div>
+        <div class="service-card">
+            <h3>Diet Plan</h3>
+            <p>Personalized meal plans that fuel your body with the right nutrients for optimal health and performance.</p>
+        </div>
+        <div class="service-card">
+            <h3>WorkOut Routine</h3>
+            <p>Tailored workout plans designed to help you reach your fitness goals, whether you're a beginner or an experienced athlete.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Wellness Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wellness Website</title>
+    <style>
+        body{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image: url("../images/1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0; /* Remove default margins to ensure proper layout */
+            padding: 0;            
+        }
+
+        header {
+            background: #58a6ff;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+           font-size: 2rem;
+           margin: 0; /* Remove margin for better alignment */
+        }
+
+        nav {
+            background: rgb(122, 119, 119);
+            color: rgb(68, 17, 32);
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 0.7rem;
+            border: none;
+            background: #58a6ff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-form button:hover {
+            background: #005bb5;
+        }
+
+        .success-container {
+            display: none; /* Initially hidden */
+            max-width: 300px;
+            margin: 2rem auto;
+            margin-top: 9.5rem;
+            margin-bottom: 9.5rem;
+            padding: 2rem;
+            background: #e6f8e9;
+            border: 1px solid #34c759;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-container .success-icon {
+            font-size: 50px;
+            color: #34c759;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: rgb(122, 119, 119);
+            color: #fff;
+            text-align: center;
+            padding: 0.08rem 0;
+            margin-top: 0rem;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+    </nav>
+    <div class="contact-form" id="contactFormContainer">
+        <h2>Get in Touch</h2>
+        <form id="contactForm" action="#" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter Your Message..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Success Message Section -->
+    <div class="success-container" id="successMessageContainer">
+        <div class="success-icon">&#10003;</div>
+        <p>Your Message has been received!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wellness Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle form submission
+        const form = document.getElementById('contactForm');
+        const contactFormContainer = document.getElementById('contactFormContainer');
+        const successMessageContainer = document.getElementById('successMessageContainer');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent actual form submission
+            
+            // Hide the form container
+            contactFormContainer.style.display = 'none';
+
+            // Show the success message container
+            successMessageContainer.style.display = 'block';
+
+            // Reset the form fields
+            form.reset();
+
+            // Automatically hide success message and show form after 3 seconds
+            setTimeout(() => {
+                successMessageContainer.style.display = 'none';
+                contactFormContainer.style.display = 'block';
+            }, 3000); // 3000ms = 3 seconds
+        });
+    </script>
+
+</body>
+</html>
